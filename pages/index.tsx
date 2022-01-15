@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       <main>
         <Nav/>
         <Box>
-          <Heading pt={8}>Hi, I'm hukurouo </Heading>
+          <Heading pt={8}>{"hello"}</Heading>
         </Box>
       </main>
 
