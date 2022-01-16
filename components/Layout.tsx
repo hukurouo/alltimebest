@@ -1,7 +1,6 @@
-import { Container } from '@chakra-ui/react'
+import { Container, Box } from '@chakra-ui/react'
 import {Nav} from "../components/Nav"
 
-const name = "みんなのオールタイムベスト";
 export const siteTitle = "みんなのオールタイムベスト";
 
 type typeLayout = {
@@ -11,8 +10,9 @@ type typeLayout = {
 
 export function Layout({ children, page }: typeLayout) {
   return (
-    <Container maxWidth={720}>
+    <Container maxWidth={720} mb={16}>
       <Nav page={page}/>
+      <Box py={4}></Box>
       <main>{children}</main>
     </Container>
   );

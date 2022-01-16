@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Box, Container, Heading, Flex } from '@chakra-ui/react'
 import { Layout } from "../components/Layout"
+import { CreateForm } from '../components/CreateForm'
 
 const siteTitle = "みんなのオールタイムベスト"
 
@@ -20,11 +21,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Flex h={16} justify='center' align='center'>
         <Box>
-          <Heading pt={8} size={"lg"} color={"blue.400"}>{"# " + siteTitle}</Heading>
+          <CreateForm></CreateForm>
         </Box>
-        </Flex>
       </main>
 
     </Layout>

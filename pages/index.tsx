@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       <main>
         <Flex h={16} justify='center' align='center'>
         <Box>
-          <Heading pt={8} size={"lg"} color={"blue.400"}>{"# " + siteTitle}</Heading>
+          <Heading size={"lg"} color={"blue.400"}>{"# " + siteTitle}</Heading>
         </Box>
         </Flex>
       </main>

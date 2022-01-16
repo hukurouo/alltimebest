@@ -9,7 +9,6 @@ import {
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import Link from 'next/link'
-import {MenuComponent} from "../components/Menu"
 
 export function Nav({page}:{page: string}) {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -31,19 +30,16 @@ export function Nav({page}:{page: string}) {
               <a><Text as="b" color={WhatColor(page, "top")} >{"TOP"}</Text></a>
             </Link>
             <Link href='/create'>
-              <a><Text as="b" color={WhatColor(page, "create")} >{"作成"}</Text></a>
+              <a><Text as="b" color={WhatColor(page, "create")} >{"ページ作成"}</Text></a>
             </Link>
             <Link href='/'>
               <a><Text as="b" color={WhatColor(page, "search")} >{"検索"}</Text></a>
             </Link>
-            <Link href='/'>
-              <a><Text as="b" color={WhatColor(page, "timeline")} >{"新着"}</Text></a>
-            </Link>
-            <MenuComponent></MenuComponent>
-            <Button onClick={toggleColorMode} mr={0} width={10}>
+            <Box>
+            <Button onClick={toggleColorMode} ml={2} mr={0} width={10}>
               {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
             </Button>
-            
+            </Box>
           </Stack>
         </Flex>
       </Box>
